@@ -13,59 +13,60 @@
 </head>
 
 <body>
-    <section class="position-relative home">
-        <nav class="navbar navbar-expand-lg shadow-1">
-            <div class="container-fluid">
-                <a class="navbar-brand nav-logo d-flex align-items-center" href="index.html">
-                    <img src="assets/imagesandvectors/logonew.png" alt="">
-                    <p class="m-0 nav-text">Sonika</p>
-                </a>
-                <button
-                    class="navbar-toggler shadow-none border-0 hamburger hamburger--spring js-hamburger collapsed ms-auto"
-                    type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="index.html">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Amenties</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Floor Plans</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Video</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Location</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tour</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
-        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade h-100" data-bs-ride="carousel">
+    <nav class="navbar navbar-expand-lg shadow-1">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-logo d-flex align-items-center" href="index.html">
+                <img src="assets/imagesandvectors/logonew.png" alt="">
+                <p class="m-0 nav-text">Sonika</p>
+            </a>
+            <button
+                class="navbar-toggler shadow-none border-0 hamburger hamburger--spring js-hamburger collapsed ms-auto"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Amenties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Floor Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Video</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="position-relative home mb-5 mb-lg-0">
+
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade h-100 mb-5 mb-lg-0" data-bs-ride="carousel">
             <div class="carousel-inner h-100">
                 <div class="carousel-item active h-100">
                     <img src="https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/10/slide-one-f-1.jpg"
@@ -92,8 +93,8 @@
             </button>
         </div>
 
-        <div class="home-card">
-            <div class="card border-0 p-4 p-lg-5">
+        <div class="home-card mb-5 mb-lg-0">
+            <div class="card border-0 p-md-4 p-lg-5">
                 <div class="card-body p-0">
                     <address><i class="bi bi-geo-alt-fill"></i> <span>Aragon Ave, Coral Gxxxx, FL 331xx</span></address>
                     <div class="pe-md-5">
@@ -112,10 +113,10 @@
         </div>
     </section>
 
-    <section>
-        <div class="container py-5 vh-100">
-            <div class="row justify-content-center align-items-center h-100">
-                <div class="col-md-3">
+    <section class="features mx-3 mx-md-0 min-vh-100 d-flex flex-column justify-content-center mb-5 mb-lg-0" id="features">
+        <div class="container">
+            <div class="row justify-content-between g-5">
+                <div class="col-lg-6 col-xl-3">
                     <p class="uniquetext">GREAT FEATURES
                     </p>
                     <h2 class="primary-header">
@@ -124,10 +125,47 @@
                     <p class="primary-text mb-5">
                         Generously sized, this home delivers the very best Interiors & exteriors.
                     </p>
-                    <a href="#" class="btn1">Schedule a Tour</a>
+                    <a href="#" class="btn2">Schedule a Tour</a>
                 </div>
-                <div class="col-md-9">
-                    
+                <div class="col-lg-6 col-xl-8">
+                    <div class="row g-5">
+                        <div class="col-md-6 col-12">
+                            <div class="mb-2">
+                                <img src="assets/imagesandvectors/features/home.png" class="feature-img"
+                                    alt="assets/imagesandvectors/features/home">
+                            </div>
+                            <h1 class="quartary-header">Latest Property</h1>
+                            <p class="primary-text pe-md-5">Tasteful and seem-less renovation, this home is a unique
+                                refreshing.</p>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="mb-2">
+                                <img src="assets/imagesandvectors/features/checked.png" class="feature-img"
+                                    alt="assets/imagesandvectors/features/home">
+                            </div>
+                            <h1 class="quartary-header">Awesome Area</h1>
+                            <p class="primary-text pe-md-5">This suite offers outstanding views of the city, ocean and
+                                mountains.</p>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="mb-2">
+                                <img src="assets/imagesandvectors/features/earth.png" class="feature-img"
+                                    alt="assets/imagesandvectors/features/home">
+                            </div>
+                            <h1 class="quartary-header">Great Surroundings</h1>
+                            <p class="primary-text pe-md-5">Coral Gables provides a coastal lifestyle in a tropical
+                                setting.</p>
+                        </div>
+                        <div class="col-md-6 col-12">
+                            <div class="mb-2">
+                                <img src="assets/imagesandvectors/features/diamond.png" class="feature-img"
+                                    alt="assets/imagesandvectors/features/home">
+                            </div>
+                            <h1 class="quartary-header">Supreme Location</h1>
+                            <p class="primary-text pe-md-5">It is ideally situated on a very private lot along a whisper
+                                quiet street.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
