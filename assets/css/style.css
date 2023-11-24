@@ -218,6 +218,10 @@ img {
 
 /* feature section css starts here */
 
+.features {
+    padding: 150px 0% 100px;
+}
+
 .feature-img {
     width: 60px;
 }
@@ -455,7 +459,7 @@ img {
 
     .features {
         text-align: center;
-        padding: 0 6%;
+        padding: 100px 6%;
     }
 
     .features img {
@@ -511,5 +515,9 @@ img {
         left: 50%;
         top: 0;
         transform: translate(-50%, 0px);
+    }
+
+    .features {
+        padding: 50px 6%;
     }
 }
