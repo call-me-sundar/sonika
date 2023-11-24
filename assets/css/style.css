@@ -21,6 +21,13 @@
     --sonika-primary-border-radius: 4px;
 }
 
+.primary-color{
+    color: var(--sonika-primary-color);
+}
+.secondary-color{
+    color: var(--sonika-secondary-color);
+}
+
 .primary-header {
     font-size: 38px;
     line-height: 1.2em;
