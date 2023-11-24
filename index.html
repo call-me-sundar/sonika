@@ -5,17 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonika</title>
+    <!-- favicon -->
     <link rel="shortcut icon" href="assets/imagesandvectors/logo.png" type="image/x-icon">
+    <!-- Bootstrap CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icon CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- aos scrolling animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- general custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- hamburger custom css -->
     <link rel="stylesheet" href="assets/css/hamburger.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg shadow-1">
+    <nav class="navbar navbar-expand-lg shadow-1"v data-aos="fade-down" data-aos-duration="600">
         <div class="container-fluid">
             <a class="navbar-brand nav-logo d-flex align-items-center" href="index.html">
                 <img src="assets/imagesandvectors/logonew.png" alt="">
@@ -65,8 +72,10 @@
             </div>
         </div>
     </nav>
-    <section class="position-relative home">
 
+
+    <section class="position-relative home" data-aos="fade" data-aos-duration="500" 
+    data-aos-easing="ease-in-sine">
         <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade h-100 mb-5 mb-lg-0"
             data-bs-ride="carousel">
             <div class="carousel-inner h-100">
@@ -94,8 +103,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-
-        <div class="home-card mb-5 mb-lg-0">
+        <div class="home-card mb-5 mb-lg-0"  data-aos="fade-up" data-aos-duration="800" 
+        data-aos-easing="ease-in-sine">
             <div class="card border-0 p-md-4 p-lg-5">
                 <div class="card-body p-0">
                     <address><i class="bi bi-geo-alt-fill"></i> <span>Aragon Ave, Coral Gxxxx, FL 331xx</span></address>
@@ -118,7 +127,8 @@
     <section class="features mx-3 mx-md-0 d-flex flex-column justify-content-center" id="features">
         <div class="container">
             <div class="row justify-content-evenly g-5">
-                <div class="col-lg-5 col-xl-4">
+                <div class="col-lg-5 col-xl-4"  data-aos="fade-right" data-aos-duration="500" 
+                data-aos-easing="ease-in-sine" data-aos-anchor-placement="bottom-bottom">
                     <p class="uniquetext">GREAT FEATURES
                     </p>
                     <h2 class="primary-header">
@@ -131,7 +141,8 @@
                 </div>
                 <div class="col-lg-7 col-xl-7">
                     <div class="row g-5">
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-6 col-12"  data-aos="fade-up" data-aos-duration="500" 
+                        data-aos-easing="ease-in-sine" data-aos-anchor-placement="bottom-bottom">
                             <div class="mb-2">
                                 <img src="assets/imagesandvectors/features/home.png" class="feature-img"
                                     alt="assets/imagesandvectors/features/home">
@@ -140,7 +151,8 @@
                             <p class="primary-text pe-lg-5">Tasteful and seem-less renovation, this home is a unique
                                 refreshing.</p>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-6 col-12"  data-aos="fade-up" data-aos-duration="700" 
+                        data-aos-easing="ease-in-sine" data-aos-anchor-placement="bottom-bottom">
                             <div class="mb-2">
                                 <img src="assets/imagesandvectors/features/checked.png" class="feature-img"
                                     alt="assets/imagesandvectors/features/home">
@@ -149,7 +161,8 @@
                             <p class="primary-text pe-lg-5">This suite offers outstanding views of the city, ocean and
                                 mountains.</p>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-6 col-12"  data-aos="fade-up" data-aos-duration="500" 
+                        data-aos-easing="ease-in-sine" data-aos-anchor-placement="bottom-bottom">
                             <div class="mb-2">
                                 <img src="assets/imagesandvectors/features/earth.png" class="feature-img"
                                     alt="assets/imagesandvectors/features/home">
@@ -158,7 +171,8 @@
                             <p class="primary-text pe-lg-5">Coral Gables provides a coastal lifestyle in a tropical
                                 setting.</p>
                         </div>
-                        <div class="col-md-6 col-12">
+                        <div class="col-md-6 col-12"  data-aos="fade-up" data-aos-duration="700" 
+                        data-aos-easing="ease-in-sine" data-aos-anchor-placement="bottom-bottom">
                             <div class="mb-2">
                                 <img src="assets/imagesandvectors/features/diamond.png" class="feature-img"
                                     alt="assets/imagesandvectors/features/home">
@@ -173,10 +187,11 @@
         </div>
     </section>
 
-    <section class="about text-center" id="about">
+    <section class="about text-center" data-aos="fade" id="about">
         <div class="container">
             <div class="row justify-content-center g-3">
-                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-duration="400" data-aos-easing="ease-in-sine"
+                    data-aos-anchor-placement="bottom-bottom">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title primary-header card1-header mb-2">3560</h4>
@@ -184,7 +199,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine"
+                    data-aos-anchor-placement="bottom-bottom">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title primary-header card1-header mb-2">2</h4>
@@ -192,7 +208,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-duration="600" data-aos-easing="ease-in-sine"
+                    data-aos-anchor-placement="bottom-bottom">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title primary-header card1-header mb-2">2</h4>
@@ -200,7 +217,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-duration="700" data-aos-easing="ease-in-sine"
+                    data-aos-anchor-placement="bottom-bottom">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title primary-header card1-header mb-2">2021</h4>
@@ -208,7 +226,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
+                <div class="col-10 col-sm-6 col-md-4 col-lg-3 col-xl-2" data-aos="fade-up" data-aos-duration="900" data-aos-easing="ease-in-sine"
+                    data-aos-anchor-placement="bottom-bottom">
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title primary-header card1-header mb-2">2</h4>
@@ -219,13 +238,17 @@
 
             </div>
         </div>
-
     </section>
 
+    <!-- jquery downloading js -->
     <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+    <!-- AOS CDN -->
+    <script src="assets/js/aos.js"></script>
+    <!-- custom script -->
     <script src="assets/js/script.js"></script>
 </body>
 

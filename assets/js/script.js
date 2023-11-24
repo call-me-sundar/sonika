@@ -1,12 +1,18 @@
-$(document).ready(function() {
+AOS.init();
+
+$(document).ready(function () {
     // Close the navbar when clicking outside
     $(document).on('click', function (e) {
-      if (!$(e.target).closest('.navbar').length && $('.navbar-collapse').hasClass('show')) {
-        $('.navbar-toggler').click();
-      }
+        if (!$(e.target).closest('.navbar').length && $('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+        $('.navbar .nav-link').on('click', function () {
+            // Your code to execute when a nav link is clicked
+            $('.navbar-toggler').click(); // This will simulate a click on the toggler
+        });
     });
 
-// navbar
+    // navbar
     $(window).scroll(function () {
 
         if ($(this).scrollTop() >= 100) {
@@ -20,4 +26,4 @@ $(document).ready(function() {
             $('.navbar').removeClass('nav-animate nav-fixed');
         }
     });
-  });
+});
