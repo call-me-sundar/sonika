@@ -18,6 +18,7 @@
     --sonika-primary-colornew: #A5A19E;
     --sonika-secondary-color: #006524;
     --sonika-tertary-color: #487219;
+    --sonika-ham-color: rgb(48, 48, 48);
     --sonika-primary-border-radius: 4px;
 }
 
@@ -237,141 +238,6 @@ img {
 
 /* feature section css Ends here */
 
-
-.hamburger {
-    font: inherit;
-    display: inline-block;
-    overflow: visible;
-    margin: 0px;
-    padding: 15px;
-    cursor: pointer;
-    transition-timing-function: linear;
-    transition-duration: 0.15s;
-    transition-property: opacity, filter;
-    text-transform: none;
-    color: inherit;
-    border: 0px;
-    background-color: transparent;
-}
-
-.hamburger:not(.collapsed):hover,
-.hamburger:hover {
-    opacity: 0.7;
-}
-
-.hamburger:not(.collapsed) .hamburger-inner,
-.hamburger:not(.collapsed) .hamburger-inner::after,
-.hamburger:not(.collapsed) .hamburger-inner::before {
-    background-color: rgb(255, 255, 255);
-}
-
-.hamburger-box {
-    position: relative;
-    display: inline-block;
-    width: 25px;
-    height: 14px;
-}
-
-.hamburger-inner {
-    top: 50%;
-    display: block;
-    margin-top: -2px;
-}
-
-.hamburger-inner,
-.hamburger-inner::after,
-.hamburger-inner::before {
-    position: absolute;
-    width: 25px;
-    height: 2px;
-    transition-timing-function: ease;
-    transition-duration: 0.15s;
-    transition-property: transform;
-    border-radius: 4px;
-    background-color: rgb(255, 255, 255);
-}
-
-.hamburger-inner::after,
-.hamburger-inner::before {
-    display: block;
-    content: "";
-}
-
-.hamburger-inner::before {
-    top: -10px;
-}
-
-.hamburger-inner::after {
-    bottom: -10px;
-}
-
-.hamburger--spring .hamburger-inner {
-    top: 2px;
-    transition: background-color 0s linear 0.13s;
-}
-
-.hamburger--spring .hamburger-inner::before {
-    top: 8px;
-    transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
-}
-
-.hamburger--spring .hamburger-inner::after {
-    top: 16px;
-    transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
-}
-
-.hamburger--spring:not(.collapsed) .hamburger-inner {
-    transition-delay: 0.22s;
-    background-color: transparent !important;
-}
-
-.hamburger--spring:not(.collapsed) .hamburger-inner::before {
-    top: 0px;
-    transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
-    transform: translate3d(0px, 10px, 0px) rotate(45deg);
-}
-
-.hamburger--spring:not(.collapsed) .hamburger-inner::after {
-    top: 0px;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
-    transform: translate3d(0px, 10px, 0px) rotate(-45deg);
-}
-
-.hamburger--spring-r .hamburger-inner {
-    top: auto;
-    bottom: 0px;
-    transition-delay: 0s;
-    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    transition-duration: 0.13s;
-}
-
-.hamburger--spring-r .hamburger-inner::after {
-    top: -20px;
-    transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, opacity 0s linear 0s;
-}
-
-.hamburger--spring-r .hamburger-inner::before {
-    transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
-}
-
-.hamburger--spring-r:not(.collapsed) .hamburger-inner {
-    transition-delay: 0.22s;
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transform: translate3d(0px, -10px, 0px) rotate(-45deg);
-}
-
-.hamburger--spring-r:not(.collapsed) .hamburger-inner::after {
-    top: 0px;
-    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0s, opacity 0s linear 0.22s;
-    opacity: 0;
-}
-
-.hamburger--spring-r:not(.collapsed) .hamburger-inner::before {
-    top: 0px;
-    transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
-    transform: rotate(90deg);
-}
-
 @media (max-width: 1200px) {
     .navbar-nav .nav-link {
         color: var(--sonika-primary-color);
@@ -420,13 +286,13 @@ img {
 
     .navbar {
         position: relative;
-        background-color: rgb(48, 48, 48);
+        background-color: white;
     }
 
     .nav-fixed {
         transform: translate(0%, 0%);
         position: fixed;
-        background-color: rgb(48, 48, 48);
+        background-color: white;
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
