@@ -26,4 +26,13 @@ $(document).ready(function () {
             $('.navbar').removeClass('nav-animate nav-fixed');
         }
     });
+
+    var carimg = $('.amenities').height();
+    $('.amenities .carousel img').css('height', carimg);
+    $(window).resize(function () {
+        if ($(window).width() > 768) {
+            var carimg = $('.amenities').height();
+            $('.amenities .carousel img').css('height', carimg);
+        }
+    })
 });
