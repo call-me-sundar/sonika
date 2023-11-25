@@ -313,7 +313,7 @@ img {
     cursor: default;
 }
 
-#carousel2 img {
+#carousel2 img , #carousel3 img{
     max-height: 500px;
 }
 
@@ -371,6 +371,12 @@ img {
 
     .tertary-header {
         font-size: 21px;
+    }
+    .new-header {
+        font-size: 20px;
+        line-height: 1.25;
+        font-family: var(--sonika-secondary-font);
+        margin-bottom: 22px;
     }
 
     .btn1 {
@@ -448,6 +454,19 @@ img {
         height: 250px;
     }
 
+    .plans > div{
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+
+    .plans-left > div {
+        border-radius: .5rem 0.5rem 0px 0px;
+        overflow: hidden;
+    }
+    
+    .plans-right > div {
+        border-radius: 0 0 0.5rem 0.5rem;
+        overflow: hidden;
+    }
 }
 
 @media(max-width:768px) {
@@ -521,14 +540,21 @@ img {
     }
 }
 
-.hover-content{
-    position: absolute;
-    left: 25%;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 0px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+@media(min-width: 1200px){
+    .hover-content{
+        position: absolute;
+        left: 25%;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        padding: 0px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    .rounded-lg-3{
+        border-radius: 0.5rem;
+    }
 }
+
+
 
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     background: transparent;

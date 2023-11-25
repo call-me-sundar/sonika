@@ -38,4 +38,18 @@ $(document).ready(function () {
             $('.amenties .carousel img , .plans .carousel img').css('height', carimg);
         }
     })
+
+    if ($(window).width() > 1200) {
+        var planswidth = $('.plans-left').width();
+        $('.plans-right').css('left', `calc(${planswidth}px + 5%)`);
+    }
+    $(window).resize(function () {
+        if ($(window).width() > 1200) {
+            var planswidth = $('.plans-left').width();
+            $('.plans-right').css('left', `calc(${planswidth}px + 5%)`);
+        }
+    })
+    
+    
+
 });
