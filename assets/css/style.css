@@ -22,6 +22,10 @@
     --sonika-primary-border-radius: 4px;
 }
 
+.sonika-bg1{
+    background-color: var(--sonika-secondary-color);
+}
+
 .primary-color {
     color: var(--sonika-primary-color);
 }
@@ -62,6 +66,13 @@
     font-family: var(--sonika-secondary-font);
     color: var(--sonika-secondary-color);
     line-height: 1.5;
+}
+
+.new-header {
+    font-size: 24px;
+    line-height: 1.25;
+    font-family: var(--sonika-secondary-font);
+    margin-bottom: 43px;
 }
 
 .card1-header {
@@ -109,6 +120,10 @@ address span {
     color: var(--sonika-primary-colornew);
     font-size: 14px;
     text-decoration: underline;
+}
+
+.fw-400{
+    font-weight: 400;
 }
 
 .fw-700 {
@@ -506,4 +521,43 @@ img {
     }
 }
 
+.hover-content{
+    position: absolute;
+    left: 25%;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background: transparent;
+    color: #58ff58 !important;
+    position: relative;
+}
+
+.nav-pills .nav-link::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #58ff58 !important;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.nav-pills .nav-link.active::before {
+    content: "";
+    height: 4px;
+    width: 25px;
+    background: #58ff58 !important;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border-radius: 10px;
+    transition: .3s;
+}
