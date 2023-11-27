@@ -13,7 +13,7 @@ $(document).ready(function () {
             });
         }
     });
-    
+
 
     // navbar
     $(window).scroll(function () {
@@ -49,7 +49,37 @@ $(document).ready(function () {
             $('.plans-right').css('left', `calc(${planswidth}px + 5%)`);
         }
     })
-    
-    
-
 });
+
+$(document).ready(function () {
+    const sections = $('.projects .opacity');
+
+    $(window).scroll(function () {
+        const scrollPosition = $(window).scrollTop();
+        const windowHeight = $(window).height();
+
+        sections.each(function () {
+            const section = $(this);
+            const sectionTop = section.offset().top;
+            const sectionBottom = sectionTop + section.height();
+
+            // Check if the section is in the middle of the screen
+            if (scrollPosition >= sectionTop - windowHeight / 2 && scrollPosition < sectionBottom - windowHeight / 2) {
+                sections.removeClass('highlight');
+                section.addClass('highlight');
+            }
+        });
+    });
+});
+
+
+$(document).ready(function() {
+    $('.projects-header').click(function() {
+        var targetOffset = $(this).offset().top - ($(window).height() - $(this).outerHeight()) / 2;
+        
+        $('html, body').animate({
+            scrollTop: targetOffset
+        }, "fast"); // Adjust the duration as needed
+    });
+});
+
