@@ -330,6 +330,12 @@ img {
     height: 300px;
 }
 
+/* projects */
+
+.projects{
+   min-height: 100vh;    
+}
+
 @media (max-width: 1200px) {
     .navbar-nav .nav-link {
         color: var(--sonika-primary-color);
@@ -378,6 +384,14 @@ img {
         font-family: var(--sonika-secondary-font);
         margin-bottom: 22px;
     }
+
+    .nav-text {
+        font-size: 28px;
+    }
+
+    .nav-logo img {
+        width: 40px;
+    }    
 
     .btn1 {
         padding: 12px 20px;
@@ -511,12 +525,12 @@ img {
         width: 1rem;
     }
 
-    .navbar-brand {
+    /* .navbar-brand {
         position: absolute;
         left: 50%;
         top: 0;
         transform: translate(-50%, 0px);
-    }
+    } */
 
     .features {
         padding: 50px 6%;

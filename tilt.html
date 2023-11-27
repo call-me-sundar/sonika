@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Scroll</title>
+</head>
+
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .section {
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .image {
+            flex: 1;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .section:nth-child(odd) .image {
+            background-image: url('/assets/imagesandvectors/carousel/carousel_img_1.jpg');
+        }
+
+        .section:nth-child(even) .image {
+            background-image: url('/assets/imagesandvectors/carousel/carousel_img_2.jpg');
+        }
+    </style>
+    <div class="section">
+        <div class="content">
+            <h2>Section 1 Content</h2>
+            <p>This is the left side content of section 1.</p>
+        </div>
+        <div class="image"></div>
+    </div>
+
+    <div class="section">
+        <div class="content">
+            <h2>Section 2 Content</h2>
+            <p>This is the left side content of section 2.</p>
+        </div>
+        <div class="image"></div>
+    </div>
+
+    <div class="section">
+        <div class="content">
+            <h2>Section 3 Content</h2>
+            <p>This is the left side content of section 3.</p>
+        </div>
+        <div class="image"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>$(document).ready(function () {
+            const sections = $(".section");
+            let currentSection = 0;
+
+            function playTiltSound() {
+                const tiltSound = new Audio('assets/sounds/tilt.mp3');
+                tiltSound.play();
+            }
+
+            function handleScroll() {
+                const scrollPosition = $(window).scrollTop();
+                const sectionHeight = sections.eq(currentSection).outerHeight();
+
+                if (scrollPosition >= sectionHeight * (currentSection + 1)) {
+                    currentSection++;
+                    playTiltSound();
+                }
+            }
+
+            $(window).scroll(handleScroll);
+        });
+    </script>
+</body>
+
+</html>
