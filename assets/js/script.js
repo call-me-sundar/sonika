@@ -52,7 +52,9 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    const sections = $('.projects .opacity');
+    const sections = $('.projects .project-left');
+    let highlightedSection = null; // Variable to track the currently highlighted section
+    var audio = $('#myaudio')[0];
 
     $(window).scroll(function () {
         const scrollPosition = $(window).scrollTop();
@@ -65,18 +67,25 @@ $(document).ready(function () {
 
             // Check if the section is in the middle of the screen
             if (scrollPosition >= sectionTop - windowHeight / 2 && scrollPosition < sectionBottom - windowHeight / 2) {
-                sections.removeClass('highlight');
-                section.addClass('highlight');
+                // Check if the section is not already highlighted
+                if (highlightedSection !== section[0]) {
+                    sections.removeClass('highlight');
+                    section.addClass('highlight');
+                    audio.play();
+                    highlightedSection = section[0];
+                }
             }
         });
     });
 });
 
 
-$(document).ready(function() {
-    $('.projects-header').click(function() {
+
+
+$(document).ready(function () {
+    $('.project-left').click(function () {
         var targetOffset = $(this).offset().top - ($(window).height() - $(this).outerHeight()) / 2;
-        
+
         $('html, body').animate({
             scrollTop: targetOffset
         }, "fast"); // Adjust the duration as needed
