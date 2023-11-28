@@ -1,0 +1,198 @@
+.hamburger {
+    font: inherit;
+    display: inline-block;
+    overflow: visible;
+    margin: 0px;
+    padding: 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0px;
+    background-color: transparent;
+}
+
+.hamburger:not(.collapsed):hover,
+.hamburger:hover {
+    opacity: 0.7;
+}
+
+.hamburger:not(.collapsed) .hamburger-inner,
+.hamburger:not(.collapsed) .hamburger-inner::after,
+.hamburger:not(.collapsed) .hamburger-inner::before {
+    background-color: var(--sonika-ham-color);
+}
+
+.hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 25px;
+    height: 14px;
+}
+
+.hamburger-inner {
+    top: 50%;
+    display: block;
+    margin-top: -2px;
+}
+
+.hamburger-inner,
+.hamburger-inner::after,
+.hamburger-inner::before {
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    border-radius: 4px;
+    background-color: var(--sonika-ham-color);
+}
+
+.hamburger-inner::after,
+.hamburger-inner::before {
+    display: block;
+    content: "";
+}
+
+.hamburger-inner::before {
+    top: -10px;
+}
+
+.hamburger-inner::after {
+    bottom: -10px;
+}
+
+.hamburger--spring .hamburger-inner {
+    top: 2px;
+    transition: background-color 0s linear 0.13s;
+}
+
+.hamburger--spring .hamburger-inner::before {
+    top: 8px;
+    transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+
+.hamburger--spring .hamburger-inner::after {
+    top: 16px;
+    transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+
+.hamburger--spring:not(.collapsed) .hamburger-inner {
+    transition-delay: 0.22s;
+    background-color: transparent !important;
+}
+
+.hamburger--spring:not(.collapsed) .hamburger-inner::before {
+    top: 0px;
+    transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+    transform: translate3d(0px, 10px, 0px) rotate(45deg);
+}
+
+.hamburger--spring:not(.collapsed) .hamburger-inner::after {
+    top: 0px;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+    transform: translate3d(0px, 10px, 0px) rotate(-45deg);
+}
+
+.hamburger--spring-r .hamburger-inner {
+    top: auto;
+    bottom: 0px;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    transition-duration: 0.13s;
+}
+
+.hamburger--spring-r .hamburger-inner::after {
+    top: -20px;
+    transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, opacity 0s linear 0s;
+}
+
+.hamburger--spring-r .hamburger-inner::before {
+    transition: top 0.1s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19) 0s;
+}
+
+.hamburger--spring-r:not(.collapsed) .hamburger-inner {
+    transition-delay: 0.22s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0px, -10px, 0px) rotate(-45deg);
+}
+
+.hamburger--spring-r:not(.collapsed) .hamburger-inner::after {
+    top: 0px;
+    transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0s, opacity 0s linear 0.22s;
+    opacity: 0;
+}
+
+.hamburger--spring-r:not(.collapsed) .hamburger-inner::before {
+    top: 0px;
+    transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s, transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
+    transform: rotate(90deg);
+}
+
+
+/* scroller css */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #007C2C transparent;
+}
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+    height: 9px;
+    width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 0px;
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #007C2C;
+    border: 0px solid #FFFFFF;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #007C2C;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #007C2C;
+}
+
+/* bootstrap overwrite */
+
+.carousel-indicators button[data-bs-target] {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    margin: 0 7px;
+    background-color: white;
+    opacity: .8;
+}
+
+.carousel-indicators button.active {
+    background-color: var(--sonika-tertary-color);
+    opacity: 1;
+}
+
+/* selection */
+
+::selection {
+    background-color: var(--sonika-tertary-color);
+    color: white;
+}
