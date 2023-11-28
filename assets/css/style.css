@@ -31,7 +31,7 @@
 }
 
 .secondary-color {
-    color: var(--sonika-secondary-color);
+    color: var(--sonika-secondary-color) !important;
 }
 
 .primary-header {
@@ -576,6 +576,11 @@ img {
 }
 
 @media(max-width:768px) {
+
+    section {
+        overflow: hidden;
+    }
+
     .home {
         height: auto;
     }
@@ -694,4 +699,46 @@ img {
     transform: translate(0px, -50%);
     border-radius: 10px;
     transition: .3s;
+}
+
+footer {
+    background-color: #222222;
+    padding: 100px 0 20px ;
+}
+
+.footer-text {
+    letter-spacing: .5px;
+    word-spacing: 2px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-border {
+    border-color: #0e0e0e !important;
+}
+
+.footer-link i {
+    width: 14px;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+
+
+}
+
+.footer-link {
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.footer-link:hover {
+    border-color: #58ff58;
+}
+
+.footer-link:hover i {
+    color: #58ff58;
 }
