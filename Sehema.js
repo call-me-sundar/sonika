@@ -10,13 +10,12 @@ const sonikkaSchema = new Schema({
     },
     date: {
         type: Date,
-        // required: true
+        required: true
     },
     phone:{
         type:Number,
-        // required: true
-        minlength:'9',
-        maxlength:'10'
+         required: true
+       
     },
 
     email: {
