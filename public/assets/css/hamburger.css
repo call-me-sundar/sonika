@@ -196,3 +196,18 @@
     background-color: var(--sonika-tertary-color);
     color: white;
 }
+
+/* cursor */
+
+.cursor-icon {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url('../imagesandvectors/logonew.png');
+    background-size: cover;
+    pointer-events: none;
+    /* Ensure the cursor doesn't interfere with other elements */
+    transition-duration: .1s;
+    /* Optional: blend mode for a different visual effect */
+    z-index: 12345678909876543;
+}

@@ -5,6 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonikka</title>
+    <style>
+        /* spinner code */
+        .spin {
+            position: fixed;
+            height: 100vh;
+            background: #dbdbdb73;
+            width: 100%;
+            z-index: 36715667;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner-border.text-success {
+            width: 100px;
+            height: 100px;
+            border-width: 10px;
+            border-color: #007c2c;
+            border-right-color: transparent;
+        }
+    </style>
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/imagesandvectors/logo.png" type="image/x-icon">
     <!-- Bootstrap CDN -->
@@ -20,15 +41,24 @@
     <link rel="stylesheet" href="assets/css/hamburger.css">
     <!-- fancy box css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+    <!-- owl-carousel css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
 <body>
 
+    <!-- for spinner -->
+
     <div class="spin" id="spinner">
         <div class="spinner-border text-success" role="status">
             <span class="visually-hidden">Loading...</span>
-          </div>
+        </div>
     </div>
+
+    <!-- for cursor-icon -->
+    <div class="cursor-icon d-none"></div>
 
     <nav class="navbar navbar-expand-lg shadow-1" v data-aos="fade-down" data-aos-duration="600">
         <div class="container-fluid d-flex justify-content-between">
@@ -74,7 +104,7 @@
                         <a class="nav-link" href="#">Tour</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="#blog">Blog</a>
                     </li>
                 </ul>
             </div>
@@ -557,8 +587,7 @@
                 </div>
                 <div class="col-lg-6 project-right">
                     <div class="projects-files">
-                        <video muted
-                            src="assets/videos/vid1.mp4">
+                        <video muted loop src="assets/videos/vid1.mp4">
                         </video>
                     </div>
                 </div>
@@ -575,8 +604,7 @@
                 </div>
                 <div class="col-lg-6 project-right">
                     <div class="projects-files">
-                        <video muted
-                            src="assets/videos/vid2.mp4">
+                        <video muted loop src="assets/videos/vid2.mp4">
                         </video>
                     </div>
                 </div>
@@ -593,8 +621,7 @@
                 </div>
                 <div class="col-lg-6 project-right">
                     <div class="projects-files">
-                        <video muted
-                            src="assets/videos/vid3.mp4">
+                        <video muted loop src="assets/videos/vid3.mp4">
                         </video>
                     </div>
                 </div>
@@ -611,8 +638,7 @@
                 </div>
                 <div class="col-lg-6 project-right">
                     <div class="projects-files">
-                        <video muted
-                            src="assets/videos/vid4.mp4">
+                        <video muted loop src="assets/videos/vid4.mp4">
                         </video>
                     </div>
                 </div>
@@ -629,8 +655,7 @@
                 </div>
                 <div class="col-lg-6 project-right">
                     <div class="projects-files">
-                        <video muted
-                            src="assets/videos/vid5.mp4">
+                        <video muted loop src="assets/videos/vid5.mp4">
                         </video>
                     </div>
                 </div>
@@ -672,6 +697,65 @@
         </div>
     </section>
 
+    <section class="plans overflow-hidden common-padding" id="tourForm-section">
+        <div class="background"></div>
+        <div class="container">       
+            <div class="text-center ">
+                <h1 class="primary-header mb-2 text-light" data-aos="fade-up" data-aos-duration="600">Request A Tour</h1>
+                <p class="primary-text mb-5 text-light" data-aos="fade-up" data-aos-duration="700">
+                    Get in Touch With Us for Any Questions & Help    
+                </p>
+            </div>
+            <div class="tourForm p-4 my-5 rounded-4" >
+                <form id="contactForm">
+                <div class="row justify-content-center align-items-center">
+                    <div class="row d-flex col-lg justify-content-center align-items-center py-md-4">
+                        <label for="name" class="">Hey my name is</label>
+                        <input type="text" id="name"  class="flex-lg-grow-1" required>
+                    </div>
+                    <div class="row d-flex col-lg justify-content-center align-items-center py-md-4">
+                        <label for="phone" class="">and my phone is</label>
+                        <input type="tel" id="phone" class="flex-lg-grow-1" maxlength="10" pattern="[0-9]{10}" title="Please enter a 10-digit number"  required>
+                    </div>
+                    <div class="row d-flex justify-content-center align-items-center py-md-4">
+                        <label for="email" class="">and my email is</label>
+                        <input type="email" id="email" class="flex-lg-grow-1" required>
+                    </div>
+                   
+                    <div class="row d-flex justify-content-center align-items-center py-md-4">
+                        <label for="date" class="">I would like to schedule a tour at date and time</label>
+                        <input type="datetime-local" id="date" class="flex-lg-grow-1">
+                    </div>
+                    <div class="row d-flex justify-content-center align-items-center py-md-4">
+                        <label for="message" class="">I would like to discuss about</label>
+                        <input type="text" id="message" class="flex-lg-grow-1">
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center my-3">
+                    <button type="submit" class="btn2">Schedule a Tour</button>
+                </div>
+                <div id="output"></div>
+                </form>
+            
+            </div>
+        </div>
+
+</section>
+
+    <section id="blog" class="common-padding">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="primary-header mb-2" data-aos="fade-up" data-aos-duration="600">News & Updates
+                </h1>
+                <p class="primary-text mb-5" data-aos="fade-up" data-aos-duration="700">
+                    From Real Estate Industry and Beyond</p>
+            </div>
+            <div class="owl-carousel px-5" id="createcard" data-aos="fade" data-aos-duration="600">
+                <!-- comes dynamically -->
+            </div>
+        </div>
+    </section>
+
 
 
     <footer>
@@ -684,12 +768,15 @@
                     </a>
                 </div>
                 <div class="col-12 col-md-5 col-lg-4">
-                    <p class="footer-text text-white mb-3" data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">
+                    <p class="footer-text text-white mb-3" data-aos="fade-up" data-aos-duration="600"
+                        data-aos-anchor-placement="bottom-bottom">
                         Sonikka Construction: Building Dreams into Reality. Transforming blueprints into lasting
-                        structures with precision and excellence. Explore the art of construction with Sonikka, where innovation meets craftsmanship to redefine your architectural aspirations.
+                        structures with precision and excellence. Explore the art of construction with Sonikka, where
+                        innovation meets craftsmanship to redefine your architectural aspirations.
                     </p>
                 </div>
-                <div class="col-12 col-md-5 col-lg-4 text-md-end" data-aos="fade-up" data-aos-duration="600" data-aos-anchor-placement="bottom-bottom">
+                <div class="col-12 col-md-5 col-lg-4 text-md-end" data-aos="fade-up" data-aos-duration="600"
+                    data-aos-anchor-placement="bottom-bottom">
                     <div class="mb-1">
                         <a href="#" class="text-white footer-text">
                             <i class="bi bi-geo-alt-fill pe-2"></i>
@@ -712,7 +799,8 @@
                 <div class="col-12 mx-auto border-bottom footer-border border-3 mt-4 mb-5" data-aos="fade"
                     data-aos-duration="600"></div>
 
-                <div class=" d-flex justify-content-center mb-3" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="bottom-bottom">
+                <div class=" d-flex justify-content-center mb-3" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-anchor-placement="bottom-bottom">
                     <a class="d-block nav-link primary-text  footer-link" target="_blank"
                         href="https://www.linkedin.com/in/asecfire/"><i class="bi bi-facebook"></i>
                     </a>
@@ -726,10 +814,10 @@
                 </div>
             </div>
         </div>
-        <div data-aos="fade" class="d-flex justify-content-center text-center">
+        <div class="d-flex justify-content-center text-center">
             <p class="footer-bottom-text mb-0 light-color">Terms &amp; Conditions Privacy Policy </p>
         </div>
-        <div data-aos="fade" class="d-flex justify-content-center text-center">
+        <div class="d-flex justify-content-center text-center">
             <p class="footer-bottom-text mb-0">Copyright © 2023 - Sonikka | All Rights Reserved</p>
         </div>
     </footer>
@@ -746,8 +834,19 @@
     <script src="assets/js/aos.js"></script>
     <!-- fancy box js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- owl carousel JS file -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- custom script -->
     <script src="assets/js/script.js"></script>
+    <!-- contact script -->
+    <script src="assets/js/contact.js"></script>
+    <script>
+        $(document).mousemove(function (e) {
+            var cursor = $('.cursor-icon');
+            cursor.css('left', e.pageX + 'px');
+            cursor.css('top', e.pageY + 'px');
+        });
+    </script>
 </body>
 
 </html>

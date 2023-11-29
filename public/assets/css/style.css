@@ -341,6 +341,41 @@ img {
     height: 300px;
 }
 
+/* plans */
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background: transparent;
+    color: #58ff58 !important;
+    position: relative;
+}
+
+.nav-pills .nav-link::before {
+    content: "";
+    height: 4px;
+    width: 0px;
+    background: #58ff58 !important;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border-radius: 10px;
+    transition: .3s;
+}
+
+.nav-pills .nav-link.active::before {
+    content: "";
+    height: 4px;
+    width: 25px;
+    background: #58ff58 !important;
+    position: absolute;
+    left: -25px;
+    top: 50%;
+    transform: translate(0px, -50%);
+    border-radius: 10px;
+    transition: .3s;
+}
+
 /* projects */
 
 .project-left p {
@@ -398,11 +433,17 @@ img {
     border-radius: 10px;
 }
 
+/* Blogs */
+
+#blog img {
+    height: 300px;
+}
+
 /* footer */
 
 footer {
     background-color: #222222;
-    padding: 70px 0 20px ;
+    padding: 70px 0 20px;
     overflow: hidden;
 }
 
@@ -616,6 +657,10 @@ footer {
     .map iframe {
         height: 200px;
     }
+
+    #blog img {
+        height: 200px;
+    }
 }
 
 @media(max-width:768px) {
@@ -694,7 +739,7 @@ footer {
     }
 
     footer {
-        padding: 40px 20px 20px ;
+        padding: 40px 20px 20px;
     }
 }
 
@@ -713,56 +758,62 @@ footer {
     }
 }
 
-
-
-.nav-pills .nav-link.active,
-.nav-pills .show>.nav-link {
-    background: transparent;
-    color: #58ff58 !important;
+/* form starts-------------- */
+#tourForm-section input{
+    border: none;
+    border-bottom: 1px solid var(--sonika-secondary-color);
+    outline:none !important;
+    color:var(--sonika-secondary-color);
     position: relative;
+    width: 95%;
+}
+button {
+    border: none;
+}
+button:hover{
+    background-color: var(--sonika-tertary-color);
 }
 
-.nav-pills .nav-link::before {
-    content: "";
-    height: 4px;
-    width: 0px;
-    background: #58ff58 !important;
+#tourForm-section input:focus{
+    color:var(--sonika-secondary-color)
+}
+#tourForm-section{
+background-attachment: fixed;
+background-image:url("https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/09/slider-2-1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+#tourForm-section .background{
     position: absolute;
-    left: -25px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border-radius: 10px;
-    transition: .3s;
-}
-
-.nav-pills .nav-link.active::before {
-    content: "";
-    height: 4px;
-    width: 25px;
-    background: #58ff58 !important;
-    position: absolute;
-    left: -25px;
-    top: 50%;
-    transform: translate(0px, -50%);
-    border-radius: 10px;
-    transition: .3s;
-}
-
-.spin {
-    position: fixed;
-    height: 100vh;
-    background: #dbdbdb73;
+    top: 0;
+    bottom: 0;
     width: 100%;
-    z-index: 36715667;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 100%;
+    background-color: #3d5c48;
+    opacity: 0.8;
+}
+#tourForm-section .tourForm{
+    position: relative;
+    background-color: #FFFFFF;
+    /* font-size: 24px; */
 }
 
-.spinner-border.text-success {
-    width: 100px;
-    height: 100px;
-    border-width: 10px;
-    border-color: #007c2c;
-    border-right-color: transparent;
-}
+input:-webkit-autofill { 
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color:var(--sonika-secondary-color);
+  }
+  input:-webkit-autofill:focus { 
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: var(--sonika-secondary-color);
+  }
+ 
+  @media screen and (min-width:992px) {
+    #tourForm-section .tourForm{
+        font-size: 24px;
+    }
+    #tourForm-section .row .row >*{
+    width: auto;
+    }
+    }
+/* form ends------------------ */
