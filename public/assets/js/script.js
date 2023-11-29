@@ -96,6 +96,7 @@ try {
             { image: 'assets/imagesandvectors/carousel/carousel_img_1.jpg', title: 'Card 1', text: 'Content for Card 1'},
             { image: 'assets/imagesandvectors/carousel/carousel_img_2.jpg', title: 'Card 2', text: 'Content for Card 2'},
             { image: 'assets/imagesandvectors/carousel/carousel_img_3.jpg', title: 'Card 3', text: 'Content for Card 3'},
+            { image: 'assets/imagesandvectors/carousel/carousel_img_1.jpg', title: 'Card 4', text: 'Content for Card 3'},
             // Add more data as needed
         ];
 
@@ -142,6 +143,7 @@ try {
                 }
             }
         });
+        AOS.refresh();
     });
 }
 catch {
