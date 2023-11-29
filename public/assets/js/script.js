@@ -71,7 +71,11 @@ try {
                     if (highlightedSection !== section[0]) {
                         sections.removeClass('highlight');
                         section.addClass('highlight');
+                        audio.pause();
                         audio.play();
+                        $('video').each(function () {
+                            this.pause();
+                        });
                         $('.highlight + .project-right video')[0].play();
                         highlightedSection = section[0];
                     }
@@ -87,8 +91,6 @@ try {
                 scrollTop: targetOffset
             }, "fast"); // Adjust the duration as needed
         });
-
-
 
         // card creating
 
@@ -120,7 +122,7 @@ try {
         // Function to create a card element
         function createCard(image, title, text, num) {
             return `
-            <div class="mb-3">
+            <div class="mb-3 px-2">
                 <div class="card border-0 shadow-1">
                     <img src="${image}" class="card-img-top" alt="...">
                     <div class="card-body py-4">
@@ -133,23 +135,28 @@ try {
             `;
         }
 
-        // Loop through cardData and append each card to the cardContainer
-        for (var i = 0; i < cardData.length; i++) {
-            var card = createCard(cardData[i].image, cardData[i].title, cardData[i].text, i + 1);
-            $('#createcard').append(card);
-        }
+        // for (var i = 0; i < cardData.length; i++) {
+        //     var card = createCard(cardData[i].image, cardData[i].title, cardData[i].text, i + 1);
+        //     $('#createcard').append(card);
+        // }
+
+        // new -method
+        const cards = cardData.map((data, index) => createCard(data.image, data.title, data.text, index));
+        $('#createcard').append(cards.join(''));
+    
 
         $(".owl-carousel").owlCarousel({
             items: 3, // Number of items to display
             loop: true, // Infinite loop
-            margin: 30, // Margin between items
+            margin: 20, // Margin between items
             responsiveClass: true,
             autoplay: true,
             autoplayTimeout: 2000, // Pause for 3 seconds between slides
             autoplayHoverPause: true,
             responsive: {
                 0: {
-                    items: 1, // Number of items to display on small screens
+                    items: 1,
+                    margin: 0, // Number of items to display on small screens
                 },
                 600: {
                     items: 2, // Number of items to display on medium screens
@@ -158,7 +165,7 @@ try {
                     items: 3, // Number of items to display on large screens
                 }
             }
-        });   
+        });
         AOS.refresh();
     });
 }
