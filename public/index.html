@@ -47,7 +47,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
     <!-- for spinner -->
 
@@ -58,7 +58,7 @@
     </div>
 
     <!-- for cursor-icon -->
-    <div class="cursor-icon"></div>
+    <div class="cursor-icon d-none d-lg-block"></div>
 
     <nav class="navbar navbar-expand-lg shadow-1" v data-aos="fade-down" data-aos-duration="600">
         <div class="container-fluid d-flex justify-content-between">
@@ -150,7 +150,7 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
                         <h1 class="tertary-header fw-700 m-0">$625,000</h1>
-                        <a href="#" class="btn1">Schedule a Tour</a>
+                        <a href="#tour" class="btn1">Schedule a Tour</a>
                     </div>
                 </div>
             </div>
@@ -170,7 +170,7 @@
                     <p class="primary-text mb-5">
                         Generously sized, this home delivers the very best Interiors & exteriors.
                     </p>
-                    <a href="#" class="btn2">Schedule a Tour</a>
+                    <a href="#tour" class="btn2">Schedule a Tour</a>
                 </div>
                 <div class="col-lg-7 col-xl-7">
                     <div class="row g-5">
@@ -519,7 +519,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-12 bg-white h-100 px-md-5 px-3 py-5">
+                        <div class="col-md-6 col-12 bg-white h-100 px-md-5 px-3 py-md-5">
                             <div class="tab-content py-4 py-md-0" id="v-pills-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-one" role="tabpanel"
                                     aria-labelledby="v-pills-one-tab" tabindex="0">
@@ -587,7 +587,7 @@
                 </div>
                 <div class="col-lg-6 project-right">
                     <div class="projects-files">
-                        <video muted loop src="assets/videos/vid1.mp4">
+                        <video href="assets/videos/vid1.mp4" data-fancybox="gallery5" muted loop src="assets/videos/vid1.mp4">
                         </video>
                     </div>
                 </div>

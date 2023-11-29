@@ -448,7 +448,7 @@ img {
     border: none;
     border-bottom: 1px solid var(--sonika-secondary-color);
     outline: none !important;
-    color: var(--sonika-secondary-color);
+    color: var(--sonika-primary-color);
     position: relative;
     /* width: 95%; */
     width: inherit;
@@ -681,9 +681,9 @@ footer {
         height: 250px;
     }
 
-    .plans>div {
+    /* .plans>div {
         box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    }
+    } */
 
     .plans-left>div {
         border-radius: .5rem 0.5rem 0px 0px;
