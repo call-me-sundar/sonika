@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const date = document.getElementById("date").value;
         const message = document.getElementById("message").value;
 
-        console.log("fname",fname,email,phone,date,message)
+        console.log("fname",fname,email,phone,typeof(date),message)
         
         if (fname === "" || email === "" || phone === "") {
             output.textContent = "Please fill all the required fields!";
