@@ -4,15 +4,18 @@ const { Schema } = mongoose;
 const sonikkaSchema = new Schema({
     fname: {
         type: String,
-       
+        required: true,
+        minlength:'2',
+        maxlength:'20'
     },
     date: {
-        type: String,
-       
+        type: Date,
+        required: true
     },
     phone:{
         type:Number,
-     
+         required: true
+       
     },
 
     email: {
