@@ -757,3 +757,63 @@ footer {
         border-radius: 0.5rem;
     }
 }
+
+/* form starts-------------- */
+#tourForm-section input{
+    border: none;
+    border-bottom: 1px solid var(--sonika-secondary-color);
+    outline:none !important;
+    color:var(--sonika-secondary-color);
+    position: relative;
+    width: 95%;
+}
+button {
+    border: none;
+}
+button:hover{
+    background-color: var(--sonika-tertary-color);
+}
+
+#tourForm-section input:focus{
+    color:var(--sonika-secondary-color)
+}
+#tourForm-section{
+background-attachment: fixed;
+background-image:url("https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/09/slider-2-1.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+#tourForm-section .background{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #3d5c48;
+    opacity: 0.8;
+}
+#tourForm-section .tourForm{
+    position: relative;
+    background-color: #FFFFFF;
+    /* font-size: 24px; */
+}
+
+input:-webkit-autofill { 
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color:var(--sonika-secondary-color);
+  }
+  input:-webkit-autofill:focus { 
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: var(--sonika-secondary-color);
+  }
+ 
+  @media screen and (min-width:992px) {
+    #tourForm-section .tourForm{
+        font-size: 24px;
+    }
+    #tourForm-section .row .row >*{
+    width: auto;
+    }
+    }
+/* form ends------------------ */
