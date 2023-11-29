@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonikka</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="assets/imagesandvectors/logo.png" type="image/x-icon">
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Bootstrap Icon CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <!-- aos scrolling animation CDN -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- general custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- hamburger custom css -->
+    <link rel="stylesheet" href="assets/css/hamburger.css">
+    <!-- fancy box css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+</head>
+<style>
+    form .textarea,
+    input {
+        border: 1px solid;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* .container-contact {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        background-color: #fff;
+        border: 1px solid rgba(128, 128, 128, .2);
+    } */
+    .tag-cloud a {
+        transition: .2s all linear;
+        background: green;
+        color: black;
+        border: 1px solid green;
+        border-radius: 5px;
+        display: inline-block;
+    }
+
+    .tag-cloud {
+        display: inline-block;
+        margin: 10px;
+        padding: 16px 30px 10px 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        /* font-size: 1.5rem !important; */
+    }
+
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-url,
+    p {
+        margin-bottom: 20px;
+    }
+
+
+
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+</style>
+
+
+
+<body>
+
+    <nav class="navbar navbar-expand-lg shadow-1" v data-aos="fade-down" data-aos-duration="600">
+        <div class="container-fluid d-flex justify-content-between">
+            <a class="navbar-brand nav-logo d-flex align-items-center" href="index.html">
+                <img src="assets/imagesandvectors/logonew.png" alt="">
+                <p class="m-0 nav-text">Sonikka</p>
+            </a>
+            <p class="primary-text text-center">Promoters & <br> Legal Consultancy</p>
+            <button class="navbar-toggler shadow-none border-0 hamburger hamburger--spring js-hamburger collapsed"
+                type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger-box">
+                    <div class="hamburger-inner"></div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#amenties">Amenties</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#plans">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recent-projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Location</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tour</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="position-relative home" data-aos="fade" data-aos-duration="500" data-aos-easing="ease-in-sine">
+        <div id="carousel1" class="carousel slide carousel-fade h-100 mb-5 mb-lg-0" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+                <div class="carousel-item h-100">
+                    <img src="https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/10/slide-one-f-1.jpg"
+                        class="d-block w-100 h-100" alt="assets/imagesandvectors/carousel/carousel_img_1.jpg">
+                </div>
+                <div class="carousel-item active h-100">
+                    <img src="https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/10/slide-two.jpg"
+                        class="d-block w-100 h-100" alt="assets/imagesandvectors/carousel/carousel_img_2.jpg">
+                </div>
+                <div class="carousel-item h-100">
+                    <img src="assets/imagesandvectors/carousel/carousel_img_3.jpg" class="d-block w-100 h-100"
+                        alt="assets/imagesandvectors/carousel/carousel_img_3.jpg">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+    <section class="d-flex flex-wrap ">
+        <div class="container bg-light">
+            <div class=" position-relative">
+                <div class="row p-5 ">
+                    <div class="col-md-8 px-5 bg-white py-4 ">
+                        <div class="position-relative mb-5">
+                            <img class="img-fluid"
+                                src="https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/09/slider-2-1-1240x720.jpg"
+                                alt="">
+                            <div
+                                class="col-md-9 position-absolute top-100 start-50 translate-middle bg-success text-white px-5 py-2">
+                                <h4 class="entry-title ">Standard Post Format</h4>
+                                By <p class="text-white mb-1 d-inline-block">fahid</p> Posted in <a
+                                    href="https://sample.realhomes.io/single-property-02/category/luxury/"
+                                    class="text-white">Luxury</a> On <time class="entry-date published text-white"
+                                    datetime="2021-12-13T08:37:58+00:00">December 13, 2021</time>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <p class="primary-text mb-3">Enthusiastically disintermediate progressive innovation before
+                                high-payoff
+                                metrics. Intrinsicly
+                                generate sticky services without B2B e-services. Competently revolutionize parallel
+                                applications
+                                with plug-and-play meta-services. Competently leverage other's global outsourcing for
+                                superior
+                                deliverables.</p>
+                            <p class="primary-text">Professionally transform enterprise architectures with
+                                client-centered
+                                leadership skills. Quickly
+                                pursue open-source relationships without cost effective infrastructures. Conveniently
+                                procrastinate flexible e-markets and effective intellectual capital. Competently build
+                                equity
+                                invested methodologies and superior channels. Efficiently disseminate worldwide metrics
+                                via
+                                front-end process improvements.</p>
+                        </div>
+                        <div class="mb-5">
+
+                            <p class="primary-header mb-3">This is H2 Heading</p>
+                            <p class="primary-text ">Holistically scale client-focused growth strategies rather than go
+                                forward potentialities.
+                                Continually incubate prospective action items with unique architectures. Holistically
+                                strategize
+                                just in time web services.</p>
+                            <ol class="">
+                                <li class="">Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in,
+                                    pharetra a,
+                                    ultricies in, diam. Sed arcu. Cras consequat.</li>
+                                <li class="">Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu
+                                    vulputate magna
+                                    eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor,
+                                    facilisis luctus, metus.</li>
+                                <li class="">Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer
+                                    ligula
+                                    vulputate
+                                    sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet,
+                                    nisi.
+                                </li>
+                                <li class="">Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor,
+                                    ultrices
+                                    ut, elementum
+                                    vulputate, nunc.</li>
+                                <li class="">Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel,
+                                    euismod vel,
+                                    velit. Pellentesque egestas sem. Suspendisse commodo ullamcorper magna. </li>
+                            </ol>
+                        </div>
+                        <div>
+                            <p class="tertary-header mb-3">This is H3 Heading
+                            </p>
+                            <P class="primary-text mb-0 ">Continually evolve open-source systems for highly efficient
+                                deliverables.
+                                Seamlessly
+                                extend
+                                dynamic content vis-a-vis reliable meta-services. Assertively underwhelm 24/365 methods
+                                of
+                                empowerment via strategic web-readiness. Competently architect strategic human capital
+                                before
+                                extensible growth strategies. Dramatically extend bricks-and-clicks bandwidth via
+                                market-driven
+                                human capital.</P>
+                            <div class="container p-4 justify-content-start my-5"
+                                style="background-color:rgb(223, 242, 223); line-height: 30px; border-radius: 10px; ">
+                                <p><span style="font-size: 40px;">❝</span> Cras justo odio, dapibus ac facilisis in,
+                                    egestas
+                                    eget quam. Duis mollis, est non commodo
+                                    luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio
+                                    dui.
+                                    Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis
+                                    parturient
+                                    montes, nascetur ridiculus mus.</p>
+                            </div>x
+                            <p>Proactively synthesize effective methodologies and synergistic networks.
+                                Dramatically envisioneer
+                                distinctive models with go forward supply chains. Competently extend client-centered
+                                markets
+                                through client-based value. Efficiently communicate web-enabled manufactured products
+                                after
+                                fully researched total linkage. Dynamically recaptiualize cooperative relationships
+                                after
+                                client-based internal or “organic” sources.</p>
+                            <p class="">Holisticly monetize low-risk high-yield platforms with standardized growth
+                                strategies.
+                                Assertively plagiarize bricks-and-clicks methods of empowerment with enabled
+                                initiatives.
+                                Uniquely disseminate magnetic human capital whereas functional web-readiness.
+                                Collaboratively
+                                promote fully researched communities via resource maximizing markets. Efficiently
+                                repurpose
+                                state of the art e-business with innovative bandwidth.
+                            </p>
+                        </div>
+
+                        <div class="mb-5">
+                            <h2 class="tertary-header ">Leave a Reply</h2>
+                            <p class="">Your email address will not be published.
+                                Required fields are marked *</p>
+
+                            <div class="container-contact">
+                                <h2 class="quartary-header">Contact Us</h2>
+                                <form action="#" method="post">
+
+
+                                    <p class="comment-form-author"><label for="author">Name <span
+                                                class="required">*</span></label> <input id="author" name="author"
+                                            type="text" value="" size="30" maxlength="245" autocomplete="name"
+                                            required="required"></p>
+
+                                    <p class="comment-form-email"><label for="email">Email <span
+                                                class="required">*</span></label> <input id="email" name="email"
+                                            type="text" value="" size="30" maxlength="100"
+                                            aria-describedby="email-notes" autocomplete="email" required="required">
+                                    </p>
+                                    <p class="comment-form-url"><label for="url">phone<span
+                                                class="required">*</span></label> <input id="url" name="url" type="text"
+                                            value="" size="30" maxlength="200" autocomplete="url"></p>
+
+                                    <p><label for="message_ere_widget_contact_form-3">Message</label><textarea
+                                            name="message" id="message_ere_widget_contact_form-3" class="required"
+                                            style="height: 200px; resize: none;" title="* Please provide your message"
+                                            cols="40" rows="5"></textarea></p>
+
+                                    <button type="submit" class="btn btn2">Send Message</button>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 latest-post">
+                        <!-- Content for the second column -->
+                        <h2 class="primary-header">Recent Posts</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="">► Standard Post Format</a></li>
+                            <li><a href="">► Image Post Format</a></li>
+                            <li><a href="">► Gallery Post Format</a></li>
+                            <li><a href="">► Video Post Format</a></li>
+                            <li><a href="">► Another Image Post Format</a></li>
+
+                        </ul>
+                        <div>
+                            <h2 class="primary-header"> Categories</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="">► Luxury</a></li>
+                                <li><a href="">► Market Trends</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="tag-cloud">
+                            <h2 class="primary-header">Tags</h2>
+
+                            <nav>
+                                <a href="#" class="mt-2 p-1 text-white">awareness</a>
+                                <a href="#" class="mt-2 p-1 text-white">contemporary</a>
+                                <a href="#" class="mt-2 p-1 text-white">economy living</a>
+                                <a href="#" class="mt-2 p-1 text-white">image post</a>
+                                <a href="#" class="mt-2 p-1 text-white">interior</a>
+                                <a href="#" class="mt-2 p-1 text-white">living rooms</a>
+                                <a href="#" class="mt-2 p-1 text-white">studio</a>
+                                <a href="#" class="mt-2 p-1 text-white">trendy</a>
+
+
+
+
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- jquery downloading js -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <!-- AOS CDN -->
+    <script src="assets/js/aos.js"></script>
+    <!-- fancy box js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <!-- custom script -->
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

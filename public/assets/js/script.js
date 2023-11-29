@@ -72,6 +72,7 @@ try {
                         sections.removeClass('highlight');
                         section.addClass('highlight');
                         audio.play();
+                        $('.highlight + .project-right video')[0].play();
                         highlightedSection = section[0];
                     }
                 }
@@ -93,10 +94,26 @@ try {
 
         // Your data - images and content for cards
         var cardData = [
-            { image: 'assets/imagesandvectors/carousel/carousel_img_1.jpg', title: 'Card 1', text: 'Content for Card 1'},
-            { image: 'assets/imagesandvectors/carousel/carousel_img_2.jpg', title: 'Card 2', text: 'Content for Card 2'},
-            { image: 'assets/imagesandvectors/carousel/carousel_img_3.jpg', title: 'Card 3', text: 'Content for Card 3'},
-            { image: 'assets/imagesandvectors/carousel/carousel_img_1.jpg', title: 'Card 4', text: 'Content for Card 3'},
+            {
+                image: 'assets/imagesandvectors/carousel/carousel_img_1.jpg',
+                title: 'Standard Post Format',
+                text: 'Enthusiastically disintermediate progressive innovation before high-payoff metrics. Intrinsicly generate sticky…'
+            },
+            {
+                image: 'assets/imagesandvectors/carousel/carousel_img_2.jpg',
+                title: 'Standard Post Format',
+                text: 'Enthusiastically disintermediate progressive innovation before high-payoff metrics. Intrinsicly generate sticky…'
+            },
+            {
+                image: 'assets/imagesandvectors/carousel/carousel_img_3.jpg',
+                title: 'Standard Post Format',
+                text: 'Enthusiastically disintermediate progressive innovation before high-payoff metrics. Intrinsicly generate sticky…'
+            },
+            {
+                image: 'assets/imagesandvectors/carousel/carousel_img_1.jpg',
+                title: 'Standard Post Format',
+                text: 'Enthusiastically disintermediate progressive innovation before high-payoff metrics. Intrinsicly generate sticky…'
+            },
             // Add more data as needed
         ];
 
@@ -106,11 +123,10 @@ try {
             <div class="mb-3">
                 <div class="card border-0 shadow-1">
                     <img src="${image}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                    <a href="blog${num}.html">Luxery</a>
-                        <h5 class="card-title">${title}</h5>
-                        <p class="card-text">${text}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-body py-4">
+                        <p class="primary-text mb-3">In <a class ="secondary-color" href="blog${num}.html">Luxery</a></p>
+                        <h5 class="card-title quartary-header">${title}</h5>
+                        <p class="card-text primary-text mb-0">${text}</p>
                     </div>
                 </div>
             </div>
@@ -119,7 +135,7 @@ try {
 
         // Loop through cardData and append each card to the cardContainer
         for (var i = 0; i < cardData.length; i++) {
-            var card = createCard(cardData[i].image, cardData[i].title, cardData[i].text,  i+1);
+            var card = createCard(cardData[i].image, cardData[i].title, cardData[i].text, i + 1);
             $('#createcard').append(card);
         }
 
@@ -142,7 +158,7 @@ try {
                     items: 3, // Number of items to display on large screens
                 }
             }
-        });
+        });   
         AOS.refresh();
     });
 }
