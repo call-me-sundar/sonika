@@ -3,6 +3,7 @@ const Sehema = require("../Sehema.js");
 
 const SonikkaPostMethod = async (req, res) => {
   const { fname, email, phone, date, message } = req.body;
+  console.log(`${fname} ${email} ${phone} ${date}`)
   try {
     const newUser = new Sehema({
       fname,
