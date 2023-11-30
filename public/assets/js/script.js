@@ -31,6 +31,32 @@ try {
             }
         });
 
+        $(document).scroll(function () {
+            let currentSectionId = null;
+
+            $('section').each(function () {
+                let rect = $(this).get(0).getBoundingClientRect();
+
+                if (rect.top <= 50 && rect.bottom >= 0) {
+                    currentSectionId = this.id;
+                }
+            });
+
+            if (currentSectionId) {
+                console.log("Current Section ID: " + currentSectionId);
+                $('.navbar .nav-link').removeClass('active');
+                $('.navbar .nav-link[href="#' + currentSectionId + '"]').addClass('active');
+                if (currentSectionId == "recent-projects") {  
+                    $('.navbar .nav-link[href="#plans"]').addClass('active');
+                }else if (currentSectionId == "home") {  
+                    $('.navbar .nav-link[href="#home"]').addClass('active');
+                }
+            }
+        });
+
+
+
+
         var carimg = $('.amenties').height();
         $('.amenties .carousel img, .plans .carousel img').css('height', carimg);
         $(window).resize(function () {
@@ -143,7 +169,7 @@ try {
         // new -method
         const cards = cardData.map((data, index) => createCard(data.image, data.title, data.text, index));
         $('#createcard').append(cards.join(''));
-    
+
 
         $(".owl-carousel").owlCarousel({
             items: 3, // Number of items to display
@@ -165,6 +191,20 @@ try {
                     items: 3, // Number of items to display on large screens
                 }
             }
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#scrollToTopBtn').fadeIn();
+            } else {
+                $('#scrollToTopBtn').fadeOut();
+            }
+        });
+
+        // Scroll to top when the button is clicked
+        $('#scrollToTopBtn').click(function () {
+            $('html, body').animate({ scrollTop: 0 });
+            return false;
         });
         AOS.refresh();
     });

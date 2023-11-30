@@ -211,3 +211,52 @@
     /* Optional: blend mode for a different visual effect */
     z-index: 12345678909876543;
 }
+
+/* scroll-up */
+
+.scroll-top {
+    width: 50px;
+    background: white;
+    box-shadow: 1px 0rem 10px 2px rgb(0 0 0 / 10%);
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 15px;
+    display: none;
+}
+
+.scroll-top i {
+    font-size: 21px;
+    color: var(--sonika-secondary-color);
+    position: absolute;
+    top: 2px;
+    left: 1.2px;
+    width: 100%;
+    animation: up .5s infinite both;
+}
+
+.scroll-top i::before{
+    font-weight: 700 !important;
+}
+
+@keyframes up {
+    0%{
+        top: 2px;
+    }
+    50%{
+        top: -1px;
+    }
+    100%{
+        top: 2px;
+    }
+}
+
+@media(max-width:768px) {
+    .scroll-top{
+        bottom: 70px;
+    }
+}
