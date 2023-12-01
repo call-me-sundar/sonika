@@ -153,7 +153,7 @@ try {
                 <div class="card border-0 shadow-1">
                     <img src="${image}" class="card-img-top" alt="...">
                     <div class="card-body py-4">
-                        <p class="primary-text mb-3">In <a class ="secondary-color" href="blog${num}.html">Luxery</a></p>
+                        <p class="primary-text mb-3">In <a class ="secondary-color" href="blog${num}.html">Luxury</a></p>
                         <h5 class="card-title quartary-header">${title}</h5>
                         <p class="card-text primary-text mb-0">${text}</p>
                     </div>

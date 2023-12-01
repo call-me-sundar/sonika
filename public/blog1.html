@@ -22,12 +22,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
 </head>
 <style>
-    form .textarea,
-    input {
-        border: 1px solid;
-        border-radius: 4px;
-        box-sizing: border-box;
-    }
+    
 
     /* .container-contact {
         display: block;
@@ -36,39 +31,97 @@
         background-color: #fff;
         border: 1px solid rgba(128, 128, 128, .2);
     } */
-    .tag-cloud a {
-        transition: .2s all linear;
-        background: green;
-        color: black;
-        border: 1px solid green;
-        border-radius: 5px;
-        display: inline-block;
+
+
+    .pap-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
     }
 
-    .tag-cloud {
-        display: inline-block;
-        margin: 10px;
-        padding: 16px 30px 10px 10px;
-        font-size: 15px;
-        border-radius: 5px;
-        /* font-size: 1.5rem !important; */
+    .gradient-bg {
+        background: linear-gradient(45deg, #3498db, #2ecc71);
+        /* Customize the gradient colors */
+        background-size: 200% 200%;
+        animation: gradientAnimation 8s ease infinite;
     }
 
-    .comment-form-author,
+    /* Add these styles to your existing CSS */
+
+    .container-contact {
+        background-color: #f8f8f8;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+ 
+
+    /* .comment-form-author,
     .comment-form-email,
     .comment-form-url,
-    p {
+    .comment-form-comment {
         margin-bottom: 20px;
-    }
+    } */
 
-
+   
 
     input[type="text"],
     textarea {
         width: 100%;
         padding: 10px;
-        box-sizing: border-box;
         margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    
+
+    /* .btn {
+        background-color: #4CAF50;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    } */
+
+   
+
+    .required {
+        color: red;
+    }
+
+
+
+
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .nav-pills .nav-link {
+        border: none;
+        border-radius: 10px;
+        transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .nav-pills .nav-link.active,
+    .nav-pills .nav-link:hover {
+        color: #fff;
+        /* Set your active/hover text color */
+        transform: translateY(-2px);
     }
 </style>
 
@@ -82,7 +135,9 @@
                 <img src="assets/imagesandvectors/logonew.png" alt="">
                 <p class="m-0 nav-text">Sonikka</p>
             </a>
-            <p class="primary-text text-center">Promoters & <br> Legal Consultancy</p>
+            <p class="primary-text text-center">Promoters & <br> Legal Consulta
+
+                ncy</p>
             <button class="navbar-toggler shadow-none border-0 hamburger hamburger--spring js-hamburger collapsed"
                 type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -155,11 +210,11 @@
         </div>
 
     </section>
-    <section class="d-flex flex-wrap ">
-        <div class="container bg-light">
+    <section class=" bg-light">
+        <div class="container">
             <div class=" position-relative">
-                <div class="row p-5 ">
-                    <div class="col-md-8 px-5 bg-white py-4 ">
+                <div>
+                    <div class="px-5 py-4 ">
                         <div class="position-relative mb-5">
                             <img class="img-fluid"
                                 src="https://sample.realhomes.io/single-property-02/wp-content/uploads/sites/3/2021/09/slider-2-1-1240x720.jpg"
@@ -238,7 +293,7 @@
                                 market-driven
                                 human capital.</P>
                             <div class="container p-4 justify-content-start my-5"
-                                style="background-color:rgb(223, 242, 223); line-height: 30px; border-radius: 10px; ">
+                                style="background-color:rgb(223, 242, 223); line-height: 30px; border-radius: 10px;">
                                 <p><span style="font-size: 40px;">❝</span> Cras justo odio, dapibus ac facilisis in,
                                     egestas
                                     eget quam. Duis mollis, est non commodo
@@ -247,7 +302,7 @@
                                     Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis
                                     parturient
                                     montes, nascetur ridiculus mus.</p>
-                            </div>x
+                            </div>
                             <p>Proactively synthesize effective methodologies and synergistic networks.
                                 Dramatically envisioneer
                                 distinctive models with go forward supply chains. Competently extend client-centered
@@ -268,83 +323,105 @@
                                 state of the art e-business with innovative bandwidth.
                             </p>
                         </div>
+                        <!-- <div class="container-fluid pap-card border1">
+                            <div class="d-flex justify-content-center my-5 pap-card">
+                                <ul class="nav nav-pills mb-5 text-center justify-content-md-evenly justify-content-center my-5 text-capitalize p-10 m-0 w-100"
+                                    id="pills-tab" role="tablist">
 
-                        <div class="mb-5">
+                                    <div class="col-12 col-md d-flex justify-content-center">
+                                        <li class="nav-item py-1 w-100 d-flex align-items-center justify-content-center"
+                                            data-aos="fade-left" data-aos-duration="400" role="presentation">
+                                            <button
+                                                class="nav-link col-4 col-md-12 active border pap-card py-2 px-5 bg-primary text-white"
+                                                id="pills-All-tab" data-bs-toggle="pill" data-bs-target="#pills-All"
+                                                type="button" role="tab" aria-controls="pills-All"
+                                                aria-selected="true">All</button>
+                                        </li>
+                                    </div>
+                                    <div class="col-6 col-md justify-content-center">
+                                        <li class="nav-item py-1 d-flex align-items-center justify-content-center px-2"
+                                            data-aos="fade-left" data-aos-duration="1000" role="presentation">
+                                            <button
+                                                class="nav-link w-100 border pap-card d-flex flex-column text-center align-items-center py-2 h-100 justify-content-evenly gradient-bg text-white"
+                                                id="pills-Interviews-tab" data-bs-toggle="pill"
+                                                data-bs-target="#pills-Interviews" type="button" role="tab"
+                                                aria-controls="pills-Interviews"
+                                                aria-selected="false">Interviews</button>
+                                        </li>
+                                    </div>
+                                    <div class="col-6 col-md justify-content-center">
+                                        <li class="nav-item py-1 d-flex align-items-center justify-content-center px-2"
+                                            data-aos="fade-left" data-aos-duration="1000" role="presentation">
+                                            <button
+                                                class="nav-link w-100 border pap-card d-flex flex-column text-center align-items-center py-2 h-100 justify-content-evenly gradient-bg text-white"
+                                                id="pills-About-tab" data-bs-toggle="pill" data-bs-target="#pills-About"
+                                                type="button" role="tab" aria-controls="pills-About"
+                                                aria-selected="false">About</button>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div> -->
+
+
+
+
+
+
+
+
+
+
+                        <div class="mb-5 ">
                             <h2 class="tertary-header ">Leave a Reply</h2>
-                            <p class="">Your email address will not be published.
-                                Required fields are marked *</p>
+                            <div class="">Your email address will not be published.
+                                Required fields are marked *</div>
 
-                            <div class="container-contact">
-                                <h2 class="quartary-header">Contact Us</h2>
-                                <form action="#" method="post">
+                            <div class="row container-contact">
+                                <div class="col-md-5">
+                                    <div class="">
+                                        <h2 class="quartary-header">Contact Us</h2>
+                                        <form action="#" method="post">
 
 
-                                    <p class="comment-form-author"><label for="author">Name <span
-                                                class="required">*</span></label> <input id="author" name="author"
-                                            type="text" value="" size="30" maxlength="245" autocomplete="name"
-                                            required="required"></p>
+                                            <div class="comment-form-author"><label for="author" class="d-block mb-2">Name <span
+                                                        class="required">*</span></label> <input id="author"
+                                                    name="author" type="text" value="" size="30" maxlength="245"
+                                                    autocomplete="name" required="required"></div>
 
-                                    <p class="comment-form-email"><label for="email">Email <span
-                                                class="required">*</span></label> <input id="email" name="email"
-                                            type="text" value="" size="30" maxlength="100"
-                                            aria-describedby="email-notes" autocomplete="email" required="required">
-                                    </p>
-                                    <p class="comment-form-url"><label for="url">phone<span
-                                                class="required">*</span></label> <input id="url" name="url" type="text"
-                                            value="" size="30" maxlength="200" autocomplete="url"></p>
+                                            <div class="comment-form-email"><label for="email" class="d-block mb-2">Email <span
+                                                        class="required">*</span></label> <input id="email" name="email"
+                                                    type="text" value="" size="30" maxlength="100"
+                                                    aria-describedby="email-notes" autocomplete="email"
+                                                    required="required">
+                                            </div>
+                                            <div class="comment-form-url"><label for="url" class="d-block mb-2">phone<span
+                                                        class="required">*</span></label> <input id="url" name="url"
+                                                    type="text" value="" size="30" maxlength="200" autocomplete="url">
+                                            </div>
 
-                                    <p><label for="message_ere_widget_contact_form-3">Message</label><textarea
-                                            name="message" id="message_ere_widget_contact_form-3" class="required"
-                                            style="height: 200px; resize: none;" title="* Please provide your message"
-                                            cols="40" rows="5"></textarea></p>
+                                            <div><label for="message_ere_widget_contact_form-3" class="d-block mb-2">Message</label><textarea
+                                                    name="message" id="message_ere_widget_contact_form-3"
+                                                    class="required" style="height: 150px; resize: none;"
+                                                    title="* Please provide your message" cols="40" rows="5"></textarea>
+                                            </div>
 
-                                    <button type="submit" class="btn btn2">Send Message</button>
-                                </form>
+                                            <button type="submit" class="btn btn2">Send Message</button>
+
+
+                                           
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="https://img.freepik.com/free-vector/customer-support-flat-design-illustration_23-2148889374.jpg?size=626&ext=jpg&uid=R124346864&ga=GA1.1.1827951686.1699429508&semt=ais"
+                                        alt="Flower Image" class="flower-image">
+                                </div>
                             </div>
 
                         </div>
-
-                        <div>
-                        </div>
                     </div>
-                    <div class="col-md-3 latest-post">
-                        <!-- Content for the second column -->
-                        <h2 class="primary-header">Recent Posts</h2>
-                        <ul class="list-unstyled">
-                            <li><a href="">► Standard Post Format</a></li>
-                            <li><a href="">► Image Post Format</a></li>
-                            <li><a href="">► Gallery Post Format</a></li>
-                            <li><a href="">► Video Post Format</a></li>
-                            <li><a href="">► Another Image Post Format</a></li>
 
-                        </ul>
-                        <div>
-                            <h2 class="primary-header"> Categories</h2>
-                            <ul class="list-unstyled">
-                                <li><a href="">► Luxury</a></li>
-                                <li><a href="">► Market Trends</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="tag-cloud">
-                            <h2 class="primary-header">Tags</h2>
-
-                            <nav>
-                                <a href="#" class="mt-2 p-1 text-white">awareness</a>
-                                <a href="#" class="mt-2 p-1 text-white">contemporary</a>
-                                <a href="#" class="mt-2 p-1 text-white">economy living</a>
-                                <a href="#" class="mt-2 p-1 text-white">image post</a>
-                                <a href="#" class="mt-2 p-1 text-white">interior</a>
-                                <a href="#" class="mt-2 p-1 text-white">living rooms</a>
-                                <a href="#" class="mt-2 p-1 text-white">studio</a>
-                                <a href="#" class="mt-2 p-1 text-white">trendy</a>
-
-
-
-
-                            </nav>
-                        </div>
-                    </div>
                 </div>
 
             </div>
