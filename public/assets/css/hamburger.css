@@ -306,3 +306,9 @@
         bottom: 70px;
     }
 }
+
+@media(max-width:992px) {
+    .cursor-icon {
+        display: none;
+    }
+}
