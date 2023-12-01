@@ -5,27 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonikka</title>
-    <style>
-        /* spinner code */
-        .spin {
-            position: fixed;
-            height: 100vh;
-            background: #dbdbdb73;
-            width: 100%;
-            z-index: 36715667;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .spinner-border.text-success {
-            width: 100px;
-            height: 100px;
-            border-width: 10px;
-            border-color: #007c2c;
-            border-right-color: transparent;
-        }
-    </style>
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/imagesandvectors/logo.png" type="image/x-icon">
     <!-- Bootstrap CDN -->
@@ -892,23 +871,5 @@
     <script src="assets/js/script.js"></script>
     <!-- contact script -->
     <script src="assets/js/contact.js"></script>
-    <script>
-        if ($(window).width() > 992) {
-            $(document).mousemove(function (e) {
-                var cursor = $('.cursor-icon');
-                cursor.show();
-                cursor.css('left', e.pageX + 'px');
-                cursor.css('top', e.pageY + 'px');
-            });
-
-            $(document).click(function (e) {
-                var cursor = $('.cursor-icon');
-                cursor.css('left', e.pageX + 'px');
-                cursor.css('top', e.pageY + 'px');
-            });
-        }
-
-    </script>
 </body>
-
 </html>

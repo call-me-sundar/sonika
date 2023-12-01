@@ -1,3 +1,27 @@
+ /* spinner code */
+ .spin {
+    position: fixed;
+    height: 100vh;
+    background: #dbdbdb73;
+    width: 100%;
+    z-index: 36715667;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-border.text-success {
+    width: 100px;
+    height: 100px;
+    border-width: 10px;
+    border-color: #007c2c;
+    border-right-color: transparent;
+}
+
+
+/* navbar code */
+
+
 .hamburger {
     font: inherit;
     display: inline-block;

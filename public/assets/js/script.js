@@ -1,5 +1,21 @@
 try {
-    $('spinner').show()
+    $('spinner').show();
+
+    if ($(window).width() > 992) {
+        $(document).mousemove(function (e) {
+            var cursor = $('.cursor-icon');
+            cursor.show();
+            cursor.css('left', e.pageX + 'px');
+            cursor.css('top', e.pageY + 'px');
+        });
+
+        $(document).click(function (e) {
+            var cursor = $('.cursor-icon');
+            cursor.css('left', e.pageX + 'px');
+            cursor.css('top', e.pageY + 'px');
+        });
+    }
+
     $(document).ready(function () {
         AOS.init();
         // Close the navbar when clicking outside
@@ -47,9 +63,9 @@ try {
                 console.log("Current Section ID: " + currentSectionId);
                 $('.navbar .nav-link').removeClass('active');
                 $('.navbar .nav-link[href="#' + currentSectionId + '"]').addClass('active');
-                if (currentSectionId == "recent-projects") {  
+                if (currentSectionId == "recent-projects") {
                     $('.navbar .nav-link[href="#plans"]').addClass('active');
-                }else if (currentSectionId == "home") {  
+                } else if (currentSectionId == "home") {
                     $('.navbar .nav-link[href="#home"]').addClass('active');
                 }
             }

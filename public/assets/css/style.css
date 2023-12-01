@@ -286,7 +286,7 @@ input::placeholder {
     align-items: center;
 }
 
-.home .home-card1{
+.home .home-card1 {
     max-width: 450px;
 }
 
@@ -314,9 +314,15 @@ input::placeholder {
 }
 
 @keyframes glow {
-    0% {left: 0;}
-    100%{left: 110%;}
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: 110%;
+    }
 }
+
 /* feature section css starts here */
 
 .features {
@@ -325,6 +331,15 @@ input::placeholder {
 
 .feature-img {
     width: 60px;
+}
+
+.hero-banner {
+    height: 50vh;
+    background-image: url('../imagesandvectors/carousel/carousel_img_2.jpg');
+    background-position: bottom top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 /* about css */
@@ -698,6 +713,9 @@ footer {
         right: 0;
     }
 
+    .hero-banner{
+        height: 30vh;
+    }
 
     .features {
         text-align: center;
