@@ -227,6 +227,7 @@
     text-align: center;
     padding-top: 15px;
     display: none;
+    overflow: hidden;
 }
 
 .scroll-top i {
@@ -239,24 +240,45 @@
     animation: up .5s infinite both;
 }
 
-.scroll-top i::before{
+.scroll-top img{
+    position: relative;
+}
+
+.scroll-top i::before {
     font-weight: 700 !important;
 }
 
+.scroll-top::before {
+    content: "";
+    position: absolute;
+    background: #3d3d3d;
+    left: -1%;
+    top: 100%;
+    height: 100%;
+    transition: .3s ease;
+    width: 102%;
+}
+
+.scroll-top:hover::before {
+    top: 0;
+}
+
 @keyframes up {
-    0%{
+    0% {
         top: 2px;
     }
-    50%{
+
+    50% {
         top: -1px;
     }
-    100%{
+
+    100% {
         top: 2px;
     }
 }
 
 @media(max-width:768px) {
-    .scroll-top{
+    .scroll-top {
         bottom: 70px;
     }
 }

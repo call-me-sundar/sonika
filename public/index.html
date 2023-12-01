@@ -60,7 +60,7 @@
     <!-- for cursor-icon -->
     <div class="cursor-icon d-none d-lg-block"></div>
 
-    <nav class="navbar navbar-expand-lg shadow-1" v data-aos="fade-down" data-aos-duration="600">
+    <nav class="navbar navbar-expand-lg shadow-1" data-aos="fade-down" data-aos-duration="600">
         <div class="container-fluid d-flex justify-content-between">
             <a class="navbar-brand nav-logo d-flex align-items-center" href="index.html">
                 <img src="assets/imagesandvectors/logonew.png" alt="">
@@ -138,7 +138,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <!-- <div class="home-card mb-5 mb-lg-0 d-none" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine">
+        <div class="home-card mb-5 mb-lg-0 d-none" data-aos="fade-up" data-aos-duration="800"
+            data-aos-easing="ease-in-sine">
             <div class="card border-0 p-md-4 p-lg-5">
                 <div class="card-body p-0">
                     <address><i class="bi bi-geo-alt-fill"></i> <span>Aragon Ave, Coral Gxxxx, FL 331xx</span></address>
@@ -155,7 +156,32 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
+        <div class="home-card home-card1  mb-5 mb-lg-0" data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-in-sine">
+            <div class="card border-0 p-md-4 p-lg-5">
+                <div class="card-body p-0">
+                    <h1 class="tertary-header mb-3">Meet Us</h1>
+                    <form action="">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <input type="text" class="form-control shadow-none border-0 border-bottom rounded-0" placeholder="Enter your name"
+                                    aria-label="First name">
+                            </div>
+                            <div class="col-12">
+                                <input type="email" class="form-control shadow-none border-0 border-bottom rounded-0" placeholder="Enter your email">
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" class="form-control shadow-none border-0 border-bottom rounded-0" max="10" maxlength="10" placeholder="Enter your Mobile number">
+                            </div>
+                            <div class="col-12">
+                                <input type="text" class="form-control shadow-none border-0 border-bottom rounded-0" placeholder="Enter your District Name">
+                            </div>
+                            <button class="col-12 btn1 d-flex align-items-center justify-content-center">Get Sonikka Designs <span class="glowing">Free</span></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="features mx-3 mx-md-0 d-flex flex-column justify-content-center" id="features">
@@ -568,6 +594,7 @@
                                     class="bi bi-check-lg"></i> Greenbelt</p>
                         </div>
                     </div>
+                    <a href="#tour" data-aos="fade-up" data-aos-duration="600" class="btn2">Know more</a>
                 </div>
             </div>
         </div>
@@ -704,7 +731,7 @@
         <div class="background"></div>
         <div class="container">
             <div class="text-center">
-                <h1 class="primary-header mb-2 text-light" data-aos="fade-up" data-aos-duration="600">Contact With Us
+                <h1 class="primary-header mb-2 text-light" data-aos="fade-up" data-aos-duration="600">Connect With Us
                 </h1>
                 <p class="primary-text mb-5 text-light" data-aos="fade-up" data-aos-duration="700">
                     Get in Touch With Us for Any Questions & Help
@@ -860,6 +887,11 @@
     <script src="assets/js/contact.js"></script>
     <script>
         $(document).mousemove(function (e) {
+            var cursor = $('.cursor-icon');
+            cursor.css('left', e.pageX + 'px');
+            cursor.css('top', e.pageY + 'px');
+        });
+        $(document).click(function (e) {
             var cursor = $('.cursor-icon');
             cursor.css('left', e.pageX + 'px');
             cursor.css('top', e.pageY + 'px');

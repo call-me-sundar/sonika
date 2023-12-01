@@ -21,7 +21,8 @@ try {
 
             if ($(this).scrollTop() >= 100) {
                 $('.navbar').addClass('nav-animate');
-                if ($(this).scrollTop() > 500) {
+                $('.navbar').removeAttr('data-aos data-aos-duration');
+                if ($(this).scrollTop() > 300) {
                     $('.navbar').addClass('nav-fixed');
                 }
             }
